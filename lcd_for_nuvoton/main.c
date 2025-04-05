@@ -16,6 +16,8 @@
     extern void initialise_monitor_handles(void);
 #endif
 
+#define ASCII_A     33
+
 extern void Periph_Init(void);
 extern void Clock_Init(void);
 extern void Pin_Init(void);
@@ -45,13 +47,11 @@ int32_t main(void)
     LCD_SetCursor(1,6);
     LCD_Print("NUVOTON");
     CLK_SysTickDelay(5000000);
-    CLK_SysTickDelay(5000000);
-    CLK_SysTickDelay(5000000);
-    CLK_SysTickDelay(5000000);
-    CLK_SysTickDelay(5000000);
     LCD_Clear();
-    char test=33;
+
+    char test = ASCII_A;
     uint8_t row_toggle = 0;
+
     LCD_SetCursor(row_toggle, 0);
     while (1)
     {

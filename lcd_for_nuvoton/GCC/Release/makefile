@@ -10,9 +10,6 @@ RM := rm -rf
 -include sources.mk
 -include i2c_lcd/src/subdir.mk
 -include User/subdir.mk
--include Library/Library/subdir.mk
--include CMSIS/CMSIS/GCC/subdir.mk
--include CMSIS/CMSIS/subdir.mk
 -include subdir.mk
 -include objects.mk
 
@@ -56,7 +53,7 @@ all: lcd_for_nuvoton.elf secondary-outputs
 lcd_for_nuvoton.elf: $(OBJS) $(USER_OBJS) makefile objects.mk $(OPTIONAL_TOOL_DEPS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: Cross ARM GNU C Linker'
-	arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g -T "C:/Users/ibrahim/Desktop/M031BSP-master/SampleCode/NuCodeGen/lcd_for_nuvoton/GCC/../../../../Library/Device/Nuvoton/M031/Source/GCC/gcc_arm.ld" -Xlinker --gc-sections -Wl,-Map,"lcd_for_nuvoton.map" --specs=nano.specs -o "lcd_for_nuvoton.elf" $(OBJS) $(USER_OBJS) $(LIBS)
+	arm-none-eabi-gcc -mcpu=cortex-m0 -mthumb -O0 -fmessage-length=0 -fsigned-char -ffunction-sections -fdata-sections  -g -T "C:/Users/ibrahim/Github/i2c-lcd-nuvoton-lib/lcd_for_nuvoton/GCC/../../../../Library/Device/Nuvoton/M031/Source/GCC/gcc_arm.ld" -Xlinker --gc-sections -Wl,-Map,"lcd_for_nuvoton.map" --specs=nano.specs -o "lcd_for_nuvoton.elf" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
