@@ -1,15 +1,15 @@
 # Auto detect text files and perform LF normalization
 * text=auto
 
-# C ve header dosyaları analiz edilsin
-*.c linguist-detectable=true
-*.h linguist-detectable=true
+# Release klasörü içindeki tüm dosyaları analiz dışı bırak
+i2c-lcd-nuvoton-lib/lcd_for_nuvoton/Release/** linguist-detectable=false
 
-# .d dosyaları analiz dışı kalsın
-*.d linguist-detectable=false
-
-# Derleyici/çıkış klasörleri analiz dışı kalsın
+# GCC klasörü de analiz dışı kalsın
 i2c-lcd-nuvoton-lib/lcd_for_nuvoton/GCC/** linguist-detectable=false
 
-# Makefile analiz dışı kalsın
-Makefile linguist-detectable=false
+# Tüm .o ve .d uzantılı dosyaları analiz dışı bırak
+*.o linguist-detectable=false
+*.d linguist-detectable=false
+
+# Makefile analiz dışı
+**/Makefile linguist-detectable=false
