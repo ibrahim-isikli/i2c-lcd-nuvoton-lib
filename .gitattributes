@@ -4,4 +4,8 @@ lcd_for_nuvoton/*.c linguist-detectable=true
 lcd_for_nuvoton/*.h linguist-detectable=true
 *.c linguist-detectable=true
 *.h linguist-detectable=true
+# Bu dizin ve altındakileri analiz dışı bırak
+i2c-lcd-nuvoton-lib/lcd_for_nuvoton/GCC linguist-detectable=false
+i2c-lcd-nuvoton-lib/lcd_for_nuvoton/GCC/** linguist-detectable=false
+
 
