@@ -1,5 +1,7 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+lcd_for_nuvoton/*.c linguist-detectable=true
+lcd_for_nuvoton/*.h linguist-detectable=true
 *.c linguist-detectable=true
 *.h linguist-detectable=true
 
